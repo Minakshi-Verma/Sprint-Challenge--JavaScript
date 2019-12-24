@@ -36,18 +36,18 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Ans: Nested function can access the varible internal because of Closure. Closure is the ability to use a code that has been identified else where. Interesting thing about closure is that we can inherit the varaible down only (and not up).
+"Ans- Nested function can access the varible internal because of Closure. Closure is the ability to use a code that has been identified else where. Interesting thing about closure is that we can inherit the varaible down only (and not up)."
 
 // Explanation: we can inherit the variable down
 
-// Ans: Yes, we can only inherit the variable down (and not up) since it is the closure characterstics that the parent pass their properties to their childern and nested function show parent-child relationship.
+"Ans- Yes, we can only inherit the variable down (and not up) since it is the closure characterstics that the parent pass their properties to their childern and nested function show parent-child relationship."
 
 const external = "I'm outside the function";
 
 function myFunction() {
   console.log(external);
   const internal = "Hello! I'm inside myFunction!";
-
+  
   function nestedFunction() {
     console.log(internal);
   }
