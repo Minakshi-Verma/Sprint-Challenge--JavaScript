@@ -22,8 +22,10 @@ let dino1 = {
   period: "Late Cretaceous",
   roar: function() {
     return "RAWERSRARARWERSARARARRRR!";
-    dino1.roar();
+    // dino1.roar();
   }
+ 
+  
 };
 
 let dino2 = {
@@ -56,7 +58,7 @@ console.log(dino2.length);
 console.log(dino1.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(dino1.roar);
+console.log(dino1.roar());
 
 // ==== Arrays ====
 
@@ -241,7 +243,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(function(ani_Info) {
+zooAnimals.forEach((ani_Info)=> {
   displayNames.push(`${ani_Info.animal_name}, ${ani_Info.scientific_name}`);
   return displayNames;
 });
@@ -254,7 +256,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 const lowCaseAnimalNames = [];
-zooAnimals.map(function(ani_Info) {
+zooAnimals.map((ani_Info)=> {
   lowCaseAnimalNames.push(`${ani_Info.animal_name.toLowerCase()}`);
   return lowCaseAnimalNames;
 });
@@ -267,7 +269,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
-zooAnimals.filter(function(ani_Info) {
+zooAnimals.filter((ani_Info)=> {
   if (ani_Info.population < 5) lowPopulationAnimals.push(ani_Info.animal_name);
   // lowPopulationAnimals.push(ani_Info.population < 5);
 
@@ -282,7 +284,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 // const populationTotal = 0;
-const populationTotal = zooAnimals.reduce(function(accu, currVal) {
+const populationTotal = zooAnimals.reduce((accu, currVal)=> {
   
   return accu + currVal.population;
 }, 0);
